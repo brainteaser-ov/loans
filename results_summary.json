@@ -1,0 +1,110 @@
+{
+  "baselines": {
+    "levenshtein_threshold": {
+      "threshold": 0.023256000131368637,
+      "val": {
+        "accuracy": 0.790223316335502,
+        "precision": 0.7141301388510755,
+        "recall": 0.9483007953723789,
+        "f1": 0.8147227830408449,
+        "roc_auc": 0.8788177861809527
+      },
+      "test": {
+        "accuracy": 0.7421834956432599,
+        "precision": 0.6540499621498864,
+        "recall": 0.9494505494505494,
+        "f1": 0.7745405647691618,
+        "roc_auc": 0.8693498784276882
+      }
+    },
+    "logistic_string_features": {
+      "threshold": 0.432,
+      "val": {
+        "accuracy": 0.8371724986812027,
+        "precision": 0.8183391003460208,
+        "recall": 0.8550253073029646,
+        "f1": 0.8362800565770863,
+        "roc_auc": 0.9063730663064457
+      },
+      "test": {
+        "accuracy": 0.8108662224500256,
+        "precision": 0.765109441359033,
+        "recall": 0.8578754578754578,
+        "f1": 0.8088413054740115,
+        "roc_auc": 0.8899027538796991
+      },
+      "feature_names": [
+        "src_len",
+        "tgt_len",
+        "len_abs_diff",
+        "len_ratio_short_long",
+        "seqmatcher_ratio",
+        "levenshtein_similarity",
+        "common_prefix_ratio",
+        "common_suffix_ratio",
+        "bigram_jaccard",
+        "trigram_jaccard",
+        "first_char_same",
+        "last_char_same"
+      ]
+    }
+  },
+  "neural": [
+    {
+      "run_name": "full",
+      "best_epoch": 7,
+      "best_val_f1": 0.9925738090925557,
+      "test_metrics": {
+        "accuracy": 0.9914573722877157,
+        "precision": 0.9985119047619048,
+        "recall": 0.9831501831501831,
+        "f1": 0.9907715023994094,
+        "roc_auc": 0.999241360624646,
+        "loss": 0.03480335115522717
+      },
+      "model_parameters": 4944769
+    },
+    {
+      "run_name": "no_metadata",
+      "best_epoch": 12,
+      "best_val_f1": 0.9947549285585097,
+      "test_metrics": {
+        "accuracy": 0.9960703912523492,
+        "precision": 0.9970620639001102,
+        "recall": 0.9945054945054945,
+        "f1": 0.9957821382725105,
+        "roc_auc": 0.9997573245411862,
+        "loss": 0.015354159229855936
+      },
+      "model_parameters": 4944001
+    },
+    {
+      "run_name": "no_string_features",
+      "best_epoch": 10,
+      "best_val_f1": 0.9929488338455975,
+      "test_metrics": {
+        "accuracy": 0.9950452759268751,
+        "precision": 0.9988917620982638,
+        "recall": 0.9904761904761905,
+        "f1": 0.9946661762001103,
+        "roc_auc": 0.9992695105087036,
+        "loss": 0.02094514600137312
+      },
+      "model_parameters": 4941697
+    },
+    {
+      "run_name": "bytes_only",
+      "best_epoch": 10,
+      "best_val_f1": 0.9936536718041704,
+      "test_metrics": {
+        "accuracy": 0.9938493080471553,
+        "precision": 0.9985196150999259,
+        "recall": 0.9882783882783883,
+        "f1": 0.9933726067746687,
+        "roc_auc": 0.9992426508276653,
+        "loss": 0.02924868853547299
+      },
+      "model_parameters": 4940929
+    }
+  ]
+}

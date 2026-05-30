@@ -1,0 +1,57 @@
+{
+  "input_data": "dataset.xlsx",
+  "sheet": "dataset",
+  "split_mode": "target_form",
+  "seed": 42,
+  "rows": {
+    "all": 38822,
+    "train": 27282,
+    "val": 5687,
+    "test": 5853
+  },
+  "label_counts": {
+    "0": 20623,
+    "1": 18199
+  },
+  "neg_type_counts": {
+    "positive": 18199,
+    "noncognate_external": 10343,
+    "cognate_external": 10280
+  },
+  "used_training_columns": [
+    "src_form",
+    "tgt_form",
+    "tgt_lang",
+    "sem_field",
+    "sem_cat",
+    "src_len",
+    "tgt_len",
+    "len_abs_diff",
+    "len_ratio_short_long",
+    "seqmatcher_ratio",
+    "levenshtein_similarity",
+    "common_prefix_ratio",
+    "common_suffix_ratio",
+    "bigram_jaccard",
+    "trigram_jaccard",
+    "first_char_same",
+    "last_char_same"
+  ],
+  "provenance_columns_kept_when_available": [
+    "ID",
+    "Target_Form_ID",
+    "Target_Form_Row_ID",
+    "Target_WOLD_ID",
+    "Target_Language_ID_CLDF",
+    "Target_Glottocode",
+    "Source_Language",
+    "Source_Glottocode",
+    "Parameter_ID",
+    "Concepticon_ID",
+    "Concepticon_Gloss",
+    "Target_Borrowed",
+    "Target_Borrowed_Score",
+    "Borrowing_Comment",
+    "Borrowing_Source"
+  ]
+}
